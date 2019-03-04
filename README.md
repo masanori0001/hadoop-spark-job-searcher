@@ -1,6 +1,6 @@
-# hadoop-histlog-monitor
+# hadoop-spark-job-searcher
 
-MapReduceのジョブの過去の実行状況を表示するコマンドです
+MapReduce/sparkのジョブの過去の実行状況を表示するコマンドです
 
 ## ビルド方法
 
@@ -20,10 +20,11 @@ bash mrhist.sh [オプション]
 - -m, --mapnum  数値                 指定した数以上のmap taskを持つジョブのみを表示します
 - -r, --reducenum 数値               指定した数以上のreduce taskを持つジョブのみを表示します
 - -h, --hosts "hostnames"         指定したホストでmap, reduceを実行したジョブのみ表示します。また各ジョブのMapHosts, ReduceHostsには指定したホストだけ表示します。ホスト名は:区切りで複数指定することが可能です
+- -u, --sparkurl "Spark URL"      Spark History ServerのURLを指定します。
 
 ## 出力形式
 ```
-JobName : PigLatin:mocha_summarize.pig
+JobName : PigLatin:test.pig
 JobID : job_1507188234442_1838082
 Start Time : Sun Nov 05 05:08:41 JST 2017
 End TIme   : Sun Nov 05 05:10:41 JST 2017
