@@ -3,24 +3,28 @@
 MapReduce/sparkのジョブの過去の実行状況を表示するコマンドです
 
 ## ビルド方法
-
+```
 cd mrhist/bin  
 bash deploy.sh  
+```
 
 ## 実行方法  
-hadoopユーザで実行する必要があります
 
+```
 cd mrhist/bin  
 bash mrhist.sh [オプション]
+```
 
 ### オプション
+```
 - -s, --start "YYYY/MM/DD HH:mm"  この時間以降に開始されたジョブを表示する  
 - -e, --end "YYYY/MM/DD HH:mm"    この時間より前に開始されたジョブを表示する  
 - -p, --path "HDFS path"          MapReduceのHistory Logが格納されているパスを指定します(デフォルト /mr-history/done)
-- -m, --mapnum  数値                 指定した数以上のmap taskを持つジョブのみを表示します
-- -r, --reducenum 数値               指定した数以上のreduce taskを持つジョブのみを表示します
+- -m, --mapnum  数値              指定した数以上のmap taskを持つジョブのみを表示します
+- -r, --reducenum 数値            指定した数以上のreduce taskを持つジョブのみを表示します
 - -h, --hosts "hostnames"         指定したホストでmap, reduceを実行したジョブのみ表示します。また各ジョブのMapHosts, ReduceHostsには指定したホストだけ表示します。ホスト名は:区切りで複数指定することが可能です
 - -u, --sparkurl "Spark URL"      Spark History ServerのURLを指定します。
+```
 
 ## 出力形式
 ```
